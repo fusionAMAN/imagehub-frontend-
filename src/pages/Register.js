@@ -45,7 +45,7 @@ export const Register = () => {
         });
 
         try {
-            const response = await axios.post('https://imagehub-6usk.onrender.com/user/api/register', formData, config);
+            const response = await axios.post('https://imagehub-1-5o7f.onrender.com/user/api/register', formData, config);
 
             if (response && response.status === 200) {
                 setUserName('');

@@ -9,7 +9,7 @@ export const Home = () => {
     const [userdata, setUserData] = useState([]);
 
     const handlegetUserdata = async () => {
-        const response = await axios.get("https://imagehub-6usk.onrender.com/user/api/getUser").then((res) => res).catch((error) => error);
+        const response = await axios.get("https://imagehub-1-5o7f.onrender.com/user/api/getUser").then((res) => res).catch((error) => error);
         if (response.status === 200) {
             setUserData(response.data);
         }
@@ -17,7 +17,7 @@ export const Home = () => {
 
     const handleDeleteUser = async (username) => {
         try {
-            const response = await axios.delete(`https://imagehub-6usk.onrender.com/user/api/delete/${username}`);
+            const response = await axios.delete(`https://imagehub-1-5o7f.onrender.com/user/api/delete/${username}`);
             if (response.status === 200) {
                 toast.success("User deleted successfully");
                 handlegetUserdata(); // Refresh user data
